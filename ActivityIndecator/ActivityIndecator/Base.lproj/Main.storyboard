@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q2K-kh-Pxb">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Activity Indicator View-->
+        <scene sceneID="RH8-2t-ORY">
+            <objects>
+                <viewController title="Activity Indicator View" id="Q2K-kh-Pxb" customClass="ViewController" customModule="ActivityIndecator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yLb-S4-Ohk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="92b-bW-GTb">
+                                <rect key="frame" x="30" y="802" width="354" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3SS-Ex-MPn">
+                                        <rect key="frame" x="0.0" y="0.0" width="162" height="40"/>
+                                        <state key="normal" title="Start">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="start:" destination="Q2K-kh-Pxb" eventType="touchUpInside" id="Zmq-lY-XRP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iu8-8I-2ML">
+                                        <rect key="frame" x="192" y="0.0" width="162" height="40"/>
+                                        <state key="normal" title="Stop">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="stop:" destination="Q2K-kh-Pxb" eventType="touchUpInside" id="Qxi-XY-VN1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="qI2-of-tWE"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="vDU-V8-zVH">
+                                <rect key="frame" x="89" y="738" width="236.5" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hides when stopped" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7SR-LE-DyY">
+                                        <rect key="frame" x="0.0" y="0.0" width="157.5" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wey-gs-tLJ">
+                                        <rect key="frame" x="187.5" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="toggleHidden:" destination="Q2K-kh-Pxb" eventType="valueChanged" id="8Af-29-rwe"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="1dM-kZ-flc">
+                                <rect key="frame" x="189" y="430" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="1" green="0.04830961332" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vDU-V8-zVH" firstAttribute="centerX" secondItem="yLb-S4-Ohk" secondAttribute="centerX" id="GjN-Mz-SNe"/>
+                            <constraint firstItem="92b-bW-GTb" firstAttribute="top" secondItem="vDU-V8-zVH" secondAttribute="bottom" constant="33" id="N6g-bq-IfZ"/>
+                            <constraint firstItem="92b-bW-GTb" firstAttribute="leading" secondItem="Rwh-ze-8Di" secondAttribute="leading" constant="30" id="YPd-8L-QsP"/>
+                            <constraint firstItem="Rwh-ze-8Di" firstAttribute="trailing" secondItem="92b-bW-GTb" secondAttribute="trailing" constant="30" id="sPV-Wd-Lgf"/>
+                            <constraint firstItem="Rwh-ze-8Di" firstAttribute="bottom" secondItem="92b-bW-GTb" secondAttribute="bottom" constant="20" id="t3K-we-yo7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Rwh-ze-8Di"/>
+                    </view>
+                    <connections>
+                        <outlet property="hiddenSwitch" destination="Wey-gs-tLJ" id="FRp-zA-Zsc"/>
+                        <outlet property="loader" destination="1dM-kZ-flc" id="7eh-xW-Zq3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fT8-NB-BG5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="873"/>
+        </scene>
+    </scenes>
+</document>
